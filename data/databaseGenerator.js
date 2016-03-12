@@ -1,14 +1,14 @@
 'use strict';
 
 /**
- * Command line script that generates a SQLite database file that contains jokes about Chuck Norris using the
+ * Command line script that generates a SQLite database file that contains jokes about Castle Bot using the
  * wonderful http://api.icndb.com/jokes APIs
  *
  * Usage:
  *
  *   node databaseGenerator.js [destFile]
  *
- *   destFile is optional and it will default to "norrisbot.db"
+ *   destFile is optional and it will default to "castlebot.db"
  *
  * @author Luciano Mammino <lucianomammino@gmail.com>
  */
@@ -19,7 +19,7 @@ var Async = require('async');
 var ProgressBar = require('progress');
 var sqlite3 = require('sqlite3').verbose();
 
-var outputFile = process.argv[2] || path.resolve(__dirname, 'norrisbot.db');
+var outputFile = process.argv[2] || path.resolve(__dirname, 'castlebot.db');
 var db = new sqlite3.Database(outputFile);
 
 // executes an API request to count all the available jokes

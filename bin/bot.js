@@ -3,12 +3,12 @@
 'use strict';
 
 /**
- * NorrisBot launcher script.
+ * CastleBot launcher script.
  *
  * @author Luciano Mammino <lucianomammino@gmail.com>
  */
 
-var NorrisBot = require('../lib/norrisbot');
+var CastleBot = require('../lib/castlebot');
 
 /**
  * Environment variables used to configure the bot:
@@ -22,10 +22,10 @@ var token = process.env.BOT_API_KEY || require('../token');
 var dbPath = process.env.BOT_DB_PATH;
 var name = process.env.BOT_NAME;
 
-var norrisbot = new NorrisBot({
+var castlebot = new CastleBot({
     token: token,
     dbPath: dbPath,
     name: name
 });
 
-norrisbot.run();
+castlebot.run();

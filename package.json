@@ -1,31 +1,30 @@
 {
-  "name": "norrisbot",
+  "name": "castlebot",
   "version": "1.0.5",
-  "description": "a Slack bot that kicks asses (roundhouse-kicks to be accurate...)",
+  "description": "A Slack bot to track #castle37",
   "keywords": [
     "Slack",
     "bot",
-    "Chuck Norris",
-    "jokes"
+    "Castle Bot"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/lmammino/norrisbot"
+    "url": "https://github.com/nathanrosspowell/castlebot"
   },
   "bugs": {
-    "url": "https://github.com/lmammino/norrisbot/issues"
+    "url": "https://github.com/nathanrosspowell/castlebot/issues"
   },
-  "main": "lib/norrisbot.js",
+  "main": "lib/castlebot.js",
   "bin": {
-    "norrisbot": "bin/bot.js"
+    "castlebot": "bin/bot.js"
   },
   "scripts": {
     "start": "node bin/bot.js",
-    "test": "node_modules/.bin/xo data/jokesFetcher.js bin/bot.js lib/norrisbot.js"
+    "test": ""
   },
   "author": {
-    "name": "Luciano Mammino",
-    "email": "lucianomammino@gmail.com"
+    "name": "Nathan Ross Powell",
+    "email": "nathanrosspowell@gmail.com"
   },
   "license": "MIT",
   "engines": {
@@ -33,6 +32,9 @@
   },
   "dependencies": {
     "async": "^1.4.1",
+    "cheerio": "^0.20.0",
+    "merge": "^1.2.0",
+    "phantom": "^2.0.4",
     "progress": "^1.1.8",
     "request": "^2.60.0",
     "slackbots": "^0.3.0",
