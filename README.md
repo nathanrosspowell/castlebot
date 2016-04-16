@@ -18,7 +18,7 @@ To run the CastleBot you must have an [API token](#getting-the-api-token-for-you
 
 
 ```bash
-BOT_API_KEY=somesecretkey castlebot
+CASTLEBOT_API_KEY=somesecretkey castlebot
 ```
 
 
@@ -35,9 +35,12 @@ The CastleBot is configurable through environment variables. There are several v
 
 | Environment variable | Description |
 |----------------------|-------------|
-| `BOT_API_KEY` | this variable is mandatory and must be used to specify the API token needed by the bot to connect to your Slack organization |
-| `BOT_DB_PATH` | optional variable that allows you to use a different database or to move the default one to a different path |
-| `BOT_NAME` | the name of your bot, it’s optional and it will default to castlebot |
+| `CASTLEBOT_API_KEY` | this variable is mandatory and must be used to specify the API token needed by the bot to connect to your Slack organization |
+| `CASTLEBOT_DB_PATH` | optional variable that allows you to use a different database or to move the default one to a different path |
+| `CASTLEBOT_NAME` | the name of your bot, it’s optional and it will default to castlebot |
+| `CASTLEBOT_NAME` | the name of your bot, it’s optional and it will default to castlebot |
+| `CASTLEBOT_GO_FUND_ME` | the go fund me URL (defaults to 'castle37')|
+| `CASTLEBOT_REFRESH_RATE` | the time in seconds between scraping the go fund me URL (defaults to '300', 5 mins)|
 
 
 
@@ -49,7 +52,7 @@ If you downloaded the source code of the bot you can run it using NPM with:
 $ npm start
 ```
 
-Don't forget to set your `BOT_API_KEY` environment variable bedore doing so. Alternatively you can also create a file called `token.js` in the root folder and put your token there (you can use the `token.js.example` file as a reference).
+Don't forget to set your `CASTLEBOT_API_KEY` environment variable bedore doing so. Alternatively you can also create a file called `token.js` in the root folder and put your token there (you can use the `token.js.example` file as a reference).
 
 
 ## The Making of
