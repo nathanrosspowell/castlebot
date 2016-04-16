@@ -28,8 +28,7 @@ db.run('CREATE TABLE campaign (url TEXT PRIMARY KEY, currency TEXT DEFAULT NULL,
 db.run('CREATE TABLE donors (id INTEGER PRIMARY KEY, donation_id INTEGER, name TEXT, amount INTEGER, message TEXT)');
 // Get the GoFundMe data.
 var input = {
-    //url: 'https://www.gofundme.com/castle37'
-    url: 'https://www.gofundme.com/juanislas'
+    url: 'https://www.gofundme.com/castle37'
 }
 console.log("GoFundMe: " + input.url);
 GoFundMe(input, function(data){
