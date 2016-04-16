@@ -31,6 +31,7 @@ node_modules
 
 #do not commit real token
 token.js
+name.js
 
 #do not commit database data
 /db
