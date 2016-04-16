@@ -20,7 +20,7 @@ var CastleBot = require('../lib/castlebot');
  */
 var token = process.env.CASTLEBOT_API_KEY || require('../token')
 var dbPath = process.env.CASTLEBOT_DB_PATH
-var name = process.env.CASTLEBOT_NAME
+var name = process.env.CASTLEBOT_NAME || require('../name')
 var goFundMe = process.env.CASTLEBOT_GO_FUND_ME
 var refreshRate = process.env.CASTLEBOT_REFRESH_RATE
 
