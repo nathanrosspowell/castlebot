@@ -24,19 +24,28 @@ var db = new sqlite3.Database(outputFile);
 db.serialize();
 // Creates the database structure
 db.run('CREATE TABLE info (name TEXT PRIMARY KEY, val TEXT DEFAULT NULL)');
-db.run('CREATE TABLE campaign (name TEXT PRIMARY KEY, val TEXT DEFAULT NULL)');
+db.run('CREATE TABLE campaign (url TEXT PRIMARY KEY, currency TEXT DEFAULT NULL, goal INTEGER, donations INTEGER, amount INTEGER)');
 db.run('CREATE TABLE donors (id INTEGER PRIMARY KEY, donation_id INTEGER, name TEXT, amount INTEGER, message TEXT)');
 // Get the GoFundMe data.
 var input = {
-    //url: 'https://www.gofundme.com/39t6wr3c'
-    url: 'https://www.gofundme.com/tprseancullen'
+    //url: 'https://www.gofundme.com/castle37'
+    url: 'https://www.gofundme.com/juanislas'
 }
 console.log("GoFundMe: " + input.url);
 GoFundMe(input, function(data){
+    console.log("Adding metadata", data.donations, "records...");
+    db.run('INSERT INTO campaign (url, currency, goal, donations, amount) VALUES (?,?,?,?,?)',
+            [input.url, data.currency, data.goal, data.donations, data.amount],
+            function (err) {
+        if (err) {
+            console.log("ERR:", err);
+        }
+    });
     console.log("Adding", data.donations, "records...");
+
     for ( var i in data.donors ) {
         var d = data.donors[i];
-            console.log(i, d);
+        console.log(i, d);
         db.run('INSERT INTO donors (donation_id, name, amount, message) VALUES (?,?,?,?)',
                 [i, d.name, d.amount, d.message],
                 function (err) {
