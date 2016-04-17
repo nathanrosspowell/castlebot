@@ -11,9 +11,7 @@
  */
 
 var path = require('path');
-var request = require('request');
 var Async = require('async');
-var ProgressBar = require('progress');
 var sqlite3 = require('sqlite3').verbose();
 var GoFundMe = require('./../lib/gofundme');
 
