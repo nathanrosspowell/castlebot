@@ -5,12 +5,12 @@ This is a Slack Bot to track #castle37.
 
 ## Installation
 
-As simple as installing any other global node package. Be sure to have npm and node (`>= 0.10` version, or io.js `>= 1.0`) installed and launch:
+Clone this repro. Do a `npm install` and then run `bot.js`.
 
 ```bash
-$ npm install -g castlebot
+$ cd castlebot
+$ npm install
 ```
-
 
 ## Running the CastleBot
 
